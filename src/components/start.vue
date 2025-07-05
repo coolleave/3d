@@ -64,16 +64,68 @@ const storyMap = {
   '1': {
     src: '/1.mp4',
     choices: [
-      { label: '返回选择', target: 'intro' },
-      { label: '进入剧情 2', target: '2' },
+      { label: '梁东兴', target: '3' },
+      { label: '吴欧亚', target: '4' },
     ],
   },
-  '2': {
-    src: '/2.mp4',
+  '3': {
+    src: '/3.mp4',
     choices: [
-      { label: '返回选择', target: 'intro' },
-      { label: '进入剧情 3', target: '3' },
+      { label: '继续', target: '5' },
     ],
+  },
+  '4': {
+    src: '/4.mp4',
+    choices: [
+      { label: '继续', target: '5' },
+    ],
+  },
+  '5': {
+    src: '/5.mp4',
+    choices: [
+      { label: '梁东兴', target: '6' },
+      { label: '李明涛', target: '7' },
+    ],
+  },
+  '6': {
+    src: '/6.mp4',
+    choices: [
+      { label: '继续', target: '8' },
+    ],
+  },
+  '7': {
+    src: '/7.mp4',
+    choices: [
+      { label: '继续', target: '8' },
+    ],
+  },
+  '8': {
+    src: '/8.mp4',
+    choices: [
+      { label: '开门', target: '9' },
+      { label: '不开门', target: '10' },
+    ],
+  },
+  '9': {
+    src: '/9.mp4',
+    choices: [
+      { label: '继续', target: '11' },
+    ],
+  },
+  '10': {
+    src: '/10.mp4',
+    choices: [
+      { label: '继续', target: '11' },
+    ],
+  },
+  '11': {
+    src: '/11.mp4',
+    choices: [
+      { label: '继续', target: '12' },
+    ],
+  },
+  '12': {
+    src: '/12.mp4'
   },
 }
 
@@ -95,6 +147,7 @@ const handleEnded = () => {
 
 // 切换到新节点
 const switchToNode = async (targetKey) => {
+  
   isTransitioning.value = true
   await new Promise((resolve) => setTimeout(resolve, 500))
 
